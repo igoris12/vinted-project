@@ -1,0 +1,22 @@
+.but {
+  background-color: inherit;
+  border: 1px solid rgb(9, 177, 186);
+  border-radius: 4px;
+  margin: 0 10px;
+  padding: 4px 6px;
+}
+
+.but-secondary {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  color: rgb(9, 177, 186);
+}
+
+.but-primary {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  background-color: rgb(9, 177, 186);
+  color: white;
+}

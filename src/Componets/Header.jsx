@@ -1,7 +1,11 @@
 import React from 'react';
 import logo from '../img/logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch, faSortDown } from '@fortawesome/free-solid-svg-icons';
+import {
+  faSearch,
+  faSortDown,
+  faQuestionCircle,
+} from '@fortawesome/free-solid-svg-icons';
 
 const Header = () => {
   return (
@@ -24,13 +28,17 @@ const Header = () => {
         </span>
       </div>
       <div className="button-container">
-        <button>one</button>
-        <button>two</button>
+        <button className="but but-secondary">
+          Registroutis | Prisijungti
+        </button>
+        <button className="but but-primary">Įkelti prekę</button>
+
+        <FontAwesomeIcon
+          icon={faQuestionCircle}
+          color={'rgb(153, 153, 153)'}
+        ></FontAwesomeIcon>
       </div>
-      <div>
-        <i>icon</i>
-      </div>
-      <div className="links-container">
+      {/* <div className="links-container">
         <ul>
           <span>
             <a href="#">some shit</a>
@@ -48,7 +56,7 @@ const Header = () => {
             <a href="#">some shit</a>
           </span>
         </ul>
-      </div>
+      </div> */}
     </div>
   );
 };
