@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from '../img/logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCheckSquare, faCoffee } from '@fortawesome/free-solid-svg-icons';
+import { faSearch, faSortDown } from '@fortawesome/free-solid-svg-icons';
 
 const Header = () => {
   return (
@@ -9,19 +9,23 @@ const Header = () => {
       <div className="logo-container">
         <img src={logo} alt="logo" />
       </div>
+      <div className="sornt-container">
+        <span>
+          <p>Prekėa</p> <FontAwesomeIcon icon={faSortDown}></FontAwesomeIcon>
+        </span>
+      </div>
       <div className="search-container">
         <span>
-          Prekėa <i>icont</i>
+          <FontAwesomeIcon
+            icon={faSearch}
+            color={'rgb(153, 153, 153)'}
+          ></FontAwesomeIcon>
+          <input type="text" placeholder={'Ieškoti prekių'} />
         </span>
-        <samp>
-          <i>icon</i>
-          <input type="text" />
-        </samp>
       </div>
       <div className="button-container">
         <button>one</button>
         <button>two</button>
-        <FontAwesomeIcon icon={faCoffee}></FontAwesomeIcon>
       </div>
       <div>
         <i>icon</i>
