@@ -1,0 +1,19 @@
+.header-nav {
+  display: flex;
+  width: 100%;
+  ul {
+    display: flex;
+    list-style: none;
+    text-decoration: none;
+    margin-left: 30px;
+    :hover {
+      background-color: rgb(236, 232, 232);
+    }
+    li {
+      color: rgb(153, 153, 153);
+      font-size: 12px;
+      cursor: pointer;
+      padding: 10px 15px;
+    }
+  }
+}
