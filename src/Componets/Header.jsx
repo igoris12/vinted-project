@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from '../img/logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import {
   faSearch,
   faSortDown,
@@ -8,12 +9,19 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 const Header = () => {
+  const [sort, setSort] = useState(false);
+
+  const sortDisplayHandler = () => {
+    setSort(!sort);
+  };
+
   return (
     <div className="header-container">
       <div className="logo-container">
         <img src={logo} alt="logo" />
       </div>
-      <div className="sornt-container">
+
+      <div className="sornt-container" onClick={sortDisplayHandler}>
         <span>
           <p>Prekėa</p> <FontAwesomeIcon icon={faSortDown}></FontAwesomeIcon>
         </span>
@@ -38,25 +46,17 @@ const Header = () => {
           color={'rgb(153, 153, 153)'}
         ></FontAwesomeIcon>
       </div>
-      {/* <div className="links-container">
+      <div
+        className="search-sort-container"
+        style={{ display: sort ? 'block' : 'none' }}
+      >
         <ul>
-          <span>
-            <a href="#">some shit</a>
-          </span>
-          <span>
-            <a href="#">some shit</a>
-          </span>
-          <span>
-            <a href="#">some shit</a>
-          </span>
-          <span>
-            <a href="#">some shit</a>
-          </span>
-          <span>
-            <a href="#">some shit</a>
-          </span>
+          <li>Prekės</li>
+          <li>Nariai</li>
+          <li>Forumas</li>
+          <li>Pagalbos centras</li>
         </ul>
-      </div> */}
+      </div>
     </div>
   );
 };
