@@ -42,7 +42,7 @@
       }
       input {
         margin-left: 5px;
-        width: 330px;
+        width: 550px;
         border: none;
         background-color: inherit;
       }
@@ -57,9 +57,11 @@
 
   .search-sort-container {
     position: absolute;
+    z-index: 1;
     top: 50px;
-    left: 261px;
+    left: 150px;
     border: 1px solid rgb(211, 211, 211);
+    background-color: white;
     border-radius: 3px;
 
     ul {
