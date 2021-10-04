@@ -94,12 +94,7 @@
 @media screen and (max-width: 890px) {
   .header-container {
     justify-content: space-between;
-    .sornt-container {
-      display: none;
-    }
-    .search-container {
-      display: none;
-    }
+
     .button-container {
       display: none;
     }
@@ -122,6 +117,24 @@
       .closeIcon {
         color: rgb(153, 153, 153);
       }
+    }
+    .sornt-container {
+      position: absolute;
+      top: 40px;
+      left: 25px;
+    }
+    .search-container {
+      position: absolute;
+      top: 40px;
+      left: 109px;
+      width: 85%;
+      padding: 6px;
+      border-radius: 5px;
+    }
+
+    .search-sort-container {
+      left: 25px;
+      top: 85px;
     }
   }
 }

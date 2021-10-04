@@ -19,7 +19,8 @@ const Header = () => {
   const toggleDisplayHandler = () => {
     setToggle(!toggle);
   };
-
+  // const textInput = useRef(null);
+  // console.log(textInput);
   return (
     <div className="header">
       <div className="header-container">
@@ -65,7 +66,9 @@ const Header = () => {
         <div
           className="headerClose"
           onClick={toggleDisplayHandler}
-          style={{ display: toggle ? 'inline-block' : 'none' }}
+          style={{
+            display: toggle ? 'inline-block' : 'none',
+          }}
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
             <path d="M18.94 4L12 10.94 5.06 4 4 5.06 10.94 12 4 18.94 5.06 20 12 13.06 18.94 20 20 18.94 13.06 12 20 5.06z"></path>
