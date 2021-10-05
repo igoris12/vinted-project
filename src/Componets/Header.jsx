@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import logo from '../img/logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import HeaderNav from './HeaderNav';
@@ -19,8 +19,7 @@ const Header = () => {
   const toggleDisplayHandler = () => {
     setToggle(!toggle);
   };
-  // const textInput = useRef(null);
-  // console.log(textInput);
+
   return (
     <div className="header">
       <div className="header-container">
