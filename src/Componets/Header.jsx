@@ -12,6 +12,19 @@ import {
 const Header = () => {
   const [sort, setSort] = useState(false);
   const [toggle, setToggle] = useState(false);
+  const [mobileHeader, setMobileHeader] = useState(false);
+
+  const changeMolbie = () => {
+    if (window.innerWidth <= 680) {
+      setMobileHeader(true);
+    } else {
+      setMobileHeader(false);
+    }
+  };
+
+  window.addEventListener('resize', changeMolbie);
+
+  console.log(mobileHeader);
 
   const sortDisplayHandler = () => {
     setSort(!sort);
