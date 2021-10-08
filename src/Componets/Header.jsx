@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import logo from '../img/logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import HeaderNav from './HeaderNav';
@@ -15,16 +15,17 @@ const Header = () => {
   const [mobileHeader, setMobileHeader] = useState(false);
 
   const changeMolbie = () => {
-    if (window.innerWidth <= 680) {
+    if (window.innerWidth <= 890) {
       setMobileHeader(true);
     } else {
       setMobileHeader(false);
     }
   };
+  useEffect(() => {
+    changeMolbie();
+  }, []);
 
   window.addEventListener('resize', changeMolbie);
-
-  console.log(mobileHeader);
 
   const sortDisplayHandler = () => {
     setSort(!sort);
@@ -68,23 +69,18 @@ const Header = () => {
         <div
           className="headerHamburger"
           onClick={toggleDisplayHandler}
-          style={{ display: toggle ? 'none' : 'inline-block' }}
+          style={{ display: !mobileHeader ? 'none' : 'inline-block' }}
         >
-          <FontAwesomeIcon
-            className="hamburgerIcon"
-            icon={faBars}
-          ></FontAwesomeIcon>
-        </div>
-        <div
-          className="headerClose"
-          onClick={toggleDisplayHandler}
-          style={{
-            display: toggle ? 'inline-block' : 'none',
-          }}
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-            <path d="M18.94 4L12 10.94 5.06 4 4 5.06 10.94 12 4 18.94 5.06 20 12 13.06 18.94 20 20 18.94 13.06 12 20 5.06z"></path>
-          </svg>
+          {!toggle ? (
+            <FontAwesomeIcon
+              className="hamburgerIcon"
+              icon={faBars}
+            ></FontAwesomeIcon>
+          ) : (
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+              <path d="M18.94 4L12 10.94 5.06 4 4 5.06 10.94 12 4 18.94 5.06 20 12 13.06 18.94 20 20 18.94 13.06 12 20 5.06z"></path>
+            </svg>
+          )}
         </div>
         <div
           className="search-sort-container"
@@ -99,10 +95,21 @@ const Header = () => {
         </div>
 
         <div
-          className="mobileHeader-container"
-          style={{ display: toggle ? 'inline-block' : 'none' }}
+          className={
+            toggle ? 'mobileHeader-container' : 'mobileHeader-container active'
+          }
         >
-          aaaaaaa
+          <div className="mobileHeader-1-section">
+            <a href="#" className="but but-primary momile">
+              Įkelti prekę
+            </a>
+            <a href="#" className="but but-secondary momile">
+              Registroutis | Prisijungti
+            </a>
+            <a href="#" className="but but-noBorder momile">
+              Tavo Vinted gidas
+            </a>
+          </div>
         </div>
       </div>
       <HeaderNav />
