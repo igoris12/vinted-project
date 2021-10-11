@@ -110,6 +110,84 @@ const Header = () => {
               Tavo Vinted gidas
             </a>
           </div>
+          <div className="mobileHeader-2-section">
+            <div className="lable">Kategorijos</div>
+
+            <div className="cell-body">
+              <div className="cell-img">
+                <img
+                  src="https://images1.vinted.net/t/03_02400_srzKqhTigAZH2N6p1XpaP5Pq/48x48/1623310088.png?s=1c80e4478b971115c8dd4618de7aabbac13189e7"
+                  alt="icon"
+                />
+              </div>
+              <a href="#" className="cell-link">
+                Moterims
+              </a>
+            </div>
+            <div className="cell-body">
+              <div className="cell-img">
+                <img
+                  src="https://images1.vinted.net/t/03_026db_eoet3G4ph7RCugDXjD19dxdD/48x48/1623310082.png?s=a500167bbf92fbaa6072056ab7c2a25eafd0fc01"
+                  alt="icon"
+                />
+              </div>
+              <a href="#" className="cell-link">
+                Vyrams
+              </a>
+            </div>
+
+            <div className="cell-body">
+              <div className="cell-img">
+                <img
+                  src="https://images1.vinted.net/t/03_01a60_RahcKeScFL2WZfgrjfZUmpv9/24x24/1623310086.png?s=65686232df4e5d375887fc26c8ae2008161e80ac"
+                  alt="icon"
+                />
+              </div>
+              <a href="#" className="cell-link">
+                Vaikams
+              </a>
+            </div>
+            <div className="cell-body">
+              <div className="cell-img">
+                <img
+                  src="https://images1.vinted.net/t/03_00175_hfk6omfUTjEUmqCzE4GXXNZz/48x48/1623310088.png?s=fc29a9e411f7f091860efe881d8d79588017ebf4"
+                  alt="icon"
+                />
+              </div>
+              <a href="#" className="cell-link">
+                Namams
+              </a>
+            </div>
+          </div>
+          <div className="mobileHeader-3-section">
+            <div className="lable">Sužinok daugiau</div>
+            <a href="#">Kaip veikia Vinted?</a>
+            <a href="#">Programėlė</a>
+            <a href="#">Pagalba</a>
+            <a href="#">Aktualu</a>
+          </div>
+          <div className="mobileHeader-4-section">
+            <div className="lable">Apie įmonę</div>
+            <a href="#">Apie Vinted</a>
+            <a href="#">Karjera</a>
+            <a href="#">Žiniasklaidai</a>
+            <a href="#">Reklama</a>
+          </div>
+          <div className="mobileHeader-5-section">
+            <div className="lable">Nuostatai</div>
+            <a href="#">Saugumo politika</a>
+            <a href="#">Privatumo politika</a>
+            <a href="#">Taisyklės</a>
+            <a href="#">Slaptuku politika</a>
+          </div>
+          <div className="mobileHeader-6-section">
+            <div className="lable">Privatumas</div>
+            <a href="#">Slaptuku nustatymai</a>
+          </div>
+          <div className="mobileHeader-7-section">
+            <div className="lable">Bendruomenė</div>
+            <a href="#">Forumas</a>
+          </div>
         </div>
       </div>
       <HeaderNav />
