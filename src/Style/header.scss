@@ -5,6 +5,7 @@
   border-bottom: 1px solid rgb(225, 222, 222);
   .logo-container {
     margin: 10px 40px 0 20px;
+    cursor: pointer;
     img {
       width: 70px;
       height: auto;
@@ -30,13 +31,16 @@
     }
   }
   .search-container {
-    display: flex;
+    width: 35%;
+
     margin-top: 10px;
     background-color: #f5f5f5;
-    margin-right: 50px;
+    margin-right: 10%;
     padding: 5px 10px;
     border-left: 1px solid rgb(201, 198, 198);
+
     span {
+      display: flex;
       .icon {
         color: rgb(153, 153, 153);
       }
@@ -74,6 +78,89 @@
       :hover {
         background-color: rgb(236, 232, 232);
       }
+    }
+  }
+
+  .mobileHeader-container {
+    display: none;
+  }
+
+  .active {
+    display: block;
+    align-items: center;
+    position: absolute;
+    top: 48px;
+    width: 100%;
+    height: auto;
+    padding-bottom: 160px;
+    background-color: white;
+    .mobileHeader-mane-section {
+      gap: 5px;
+      width: 100%;
+      padding: 15px;
+      display: flex;
+      margin-top: 9px;
+      align-items: center;
+      flex-direction: column;
+      border-bottom: 1px solid rgb(211, 211, 211);
+    }
+    .mobileHeader-section {
+      width: 100%;
+      display: flex;
+      margin-top: 9px;
+      flex-direction: column;
+    }
+    .lable {
+      padding: 15px;
+      font-size: 14px;
+      margin-top: 25px;
+      color: #999999;
+    }
+  }
+}
+
+@media screen and (max-width: 890px) {
+  .header-container {
+    justify-content: space-between;
+
+    .button-container {
+      display: none;
+    }
+    .headerHamburger {
+      margin-top: 10px;
+      margin-right: 30px;
+      cursor: pointer;
+      .hamburgerIcon {
+        width: 23px;
+        height: 23px;
+        color: rgb(153, 153, 153);
+      }
+    }
+    .headerClose {
+      margin-top: 10px;
+      margin-right: 30px;
+      cursor: pointer;
+      .closeIcon {
+        color: rgb(153, 153, 153);
+      }
+    }
+    .sornt-container {
+      position: absolute;
+      top: 40px;
+      left: 25px;
+    }
+    .search-container {
+      position: absolute;
+      top: 40px;
+      left: 109px;
+      width: 85%;
+      padding: 6px;
+      border-radius: 5px;
+    }
+
+    .search-sort-container {
+      left: 25px;
+      top: 85px;
     }
   }
 }
