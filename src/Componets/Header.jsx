@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import logo from '../img/logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import HeaderNav from './HeaderNav';
+import Mobilelink from './Mobilelink';
 import {
   faSearch,
   faSortDown,
@@ -110,9 +111,14 @@ const Header = () => {
               Tavo Vinted gidas
             </a>
           </div>
-          <div className="mobileHeader-2-section">
+          <div className="mobileHeader-section">
             <div className="lable">Kategorijos</div>
-
+            <Mobilelink
+              text={'test'}
+              img={
+                'https://images1.vinted.net/t/03_02400_srzKqhTigAZH2N6p1XpaP5Pq/48x48/1623310088.png?s=1c80e4478b971115c8dd4618de7aabbac13189e7'
+              }
+            />
             <div className="cell-body">
               <div className="cell-img">
                 <img
@@ -135,7 +141,6 @@ const Header = () => {
                 Vyrams
               </a>
             </div>
-
             <div className="cell-body">
               <div className="cell-img">
                 <img
@@ -159,7 +164,7 @@ const Header = () => {
               </a>
             </div>
           </div>
-          <div className="mobileHeader-3-section">
+          <div className="mobileHeader-section">
             <div className="lable">Sužinok daugiau</div>
             <a href="#">Kaip veikia Vinted?</a>
             <a href="#">Programėlė</a>
