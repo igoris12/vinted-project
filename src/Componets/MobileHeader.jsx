@@ -6,7 +6,7 @@ const MobileHeader = ({ toggleS }) => {
     <>
       <div
         className={
-          toggleS ? 'mobileHeader-container' : 'mobileHeader-container active'
+          !toggleS ? 'mobileHeader-container' : 'mobileHeader-container active'
         }
       >
         <div className="mobileHeader-mane-section">
