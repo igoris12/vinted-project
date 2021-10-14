@@ -7,7 +7,6 @@ import {
   faSearch,
   faSortDown,
   faQuestionCircle,
-  faBars,
 } from '@fortawesome/free-solid-svg-icons';
 
 const Header = () => {
@@ -73,10 +72,9 @@ const Header = () => {
           style={{ display: !mobileHeader ? 'none' : 'inline-block' }}
         >
           {!toggle ? (
-            <FontAwesomeIcon
-              className="hamburgerIcon"
-              icon={faBars}
-            ></FontAwesomeIcon>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+              <path d="M2 20h20v-1.5H2V20zM2 5.5h20V4H2v1.5zm0 7.25h20v-1.5H2v1.5z"></path>
+            </svg>
           ) : (
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
               <path d="M18.94 4L12 10.94 5.06 4 4 5.06 10.94 12 4 18.94 5.06 20 12 13.06 18.94 20 20 18.94 13.06 12 20 5.06z"></path>

@@ -80,43 +80,6 @@
       }
     }
   }
-
-  .mobileHeader-container {
-    display: none;
-  }
-
-  .active {
-    display: block;
-    align-items: center;
-    position: absolute;
-    top: 48px;
-    width: 100%;
-    height: auto;
-    padding-bottom: 160px;
-    background-color: white;
-    .mobileHeader-mane-section {
-      gap: 5px;
-      width: 100%;
-      padding: 15px;
-      display: flex;
-      margin-top: 9px;
-      align-items: center;
-      flex-direction: column;
-      border-bottom: 1px solid rgb(211, 211, 211);
-    }
-    .mobileHeader-section {
-      width: 100%;
-      display: flex;
-      margin-top: 9px;
-      flex-direction: column;
-    }
-    .lable {
-      padding: 15px;
-      font-size: 14px;
-      margin-top: 25px;
-      color: #999999;
-    }
-  }
 }
 
 @media screen and (max-width: 890px) {
