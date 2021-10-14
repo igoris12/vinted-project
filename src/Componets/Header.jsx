@@ -94,7 +94,7 @@ const Header = () => {
             <li>Pagalbos centras</li>
           </ul>
         </div>
-        <MobileHeader toggleS={toggle} />
+        <MobileHeader toggleS={toggle} mobileHeaderS={mobileHeader} />
       </div>
       <HeaderNav />
     </div>

@@ -1,12 +1,14 @@
 import React from 'react';
 import Mobilelink from './Mobilelink';
 
-const MobileHeader = ({ toggleS }) => {
+const MobileHeader = ({ toggleS, mobileHeaderS }) => {
   return (
     <>
       <div
         className={
-          !toggleS ? 'mobileHeader-container' : 'mobileHeader-container active'
+          !toggleS || !mobileHeaderS
+            ? 'mobileHeader-container'
+            : 'mobileHeader-container active'
         }
       >
         <div className="mobileHeader-mane-section">
