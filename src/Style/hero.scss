@@ -1,0 +1,36 @@
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .hero-container-background {
+    background-image: url('https://www.vinted.lt/assets/seller-promotion/other/banner_tablets_up-afe3d19776592a72f165c1bb93fd02c5528250a8c670ecc1656654323f9d4856.jpg');
+    background-position: center;
+    .card {
+      display: flex;
+      flex-direction: column;
+      background-color: white;
+      gap: 32px;
+      width: 40%;
+      padding: 32px;
+      margin: 25px;
+      border-radius: 5px;
+      .card-title {
+        word-break: break-word;
+        font-size: 34px;
+        font-weight: 500;
+      }
+      .button-container {
+        a {
+          width: 120px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          font-size: 16px;
+          line-height: 2em;
+          display: block;
+          margin: 0 0 10px 0;
+        }
+      }
+    }
+  }
+}
