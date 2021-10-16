@@ -9,7 +9,7 @@ const Hero = ({ title, secondaryLinkText, primaryLinkText }) => {
             <h1 className="card-title">{title}</h1>
             <div className="button-container">
               <a className="but but-primary">{primaryLinkText}</a>
-              <a className="but but-noBorder momile">{secondaryLinkText}</a>
+              <a className="but but-noBorder">{secondaryLinkText}</a>
             </div>
           </div>
         </div>
