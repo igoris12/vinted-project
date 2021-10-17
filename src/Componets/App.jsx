@@ -10,7 +10,6 @@ const App = () => {
         title={'Atėjo metas atlaisvinti vietos spintoje?'}
         primaryLinkText={'Įkelti prekę'}
         secondaryLinkText={'Sužinok, kaip'}
-        // primaryLinkPath={'/'}
       />
     </div>
   );
