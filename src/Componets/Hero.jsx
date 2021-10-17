@@ -1,6 +1,12 @@
 import React from 'react';
 
-const Hero = ({ title, secondaryLinkText, primaryLinkText }) => {
+const Hero = ({
+  title,
+  secondaryLinkText,
+  secondaryLinkPath,
+  primaryLinkText,
+  primaryLinkPath,
+}) => {
   return (
     <>
       <div className="hero-container">
@@ -16,8 +22,18 @@ const Hero = ({ title, secondaryLinkText, primaryLinkText }) => {
           <h1 className="card-title">{title}</h1>
 
           <div className="button-container">
-            <a className="but but-primary">{primaryLinkText}</a>
-            <a className="but but-noBorder">{secondaryLinkText}</a>
+            <a
+              className="but but-primary"
+              href={primaryLinkPath ? primaryLinkPath : '#'}
+            >
+              {primaryLinkText}
+            </a>
+            <a
+              className="but but-noBorder"
+              href={secondaryLinkPath ? secondaryLinkPath : '#'}
+            >
+              {secondaryLinkText}
+            </a>
           </div>
         </div>
       </div>
