@@ -2,33 +2,75 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
   .hero-container-background {
-    background-image: url('https://www.vinted.lt/assets/seller-promotion/other/banner_tablets_up-afe3d19776592a72f165c1bb93fd02c5528250a8c670ecc1656654323f9d4856.jpg');
-    background-position: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    .img-container {
+      z-index: 0;
+      width: 100%;
+      height: 100%;
+      img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  .card {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    gap: 32px;
+    width: 40%;
+    padding: 32px;
+    margin: 25px;
+    border-radius: 5px;
+    .card-title {
+      word-break: break-word;
+      font-size: 34px;
+      font-weight: 500;
+    }
+    .button-container {
+      a {
+        width: 120px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 16px;
+        line-height: 2em;
+        display: block;
+        margin: 0 0 10px 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .hero-container {
+    .hero-container-background {
+      position: relative;
+    }
+
     .card {
+      width: 100%;
       display: flex;
       flex-direction: column;
-      background-color: white;
-      gap: 32px;
-      width: 40%;
-      padding: 32px;
-      margin: 25px;
-      border-radius: 5px;
+      margin: 0;
+      text-align: center;
       .card-title {
-        word-break: break-word;
-        font-size: 34px;
-        font-weight: 500;
+        font-size: 24px;
       }
       .button-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
         a {
-          width: 120px;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          white-space: nowrap;
-          font-size: 16px;
-          line-height: 2em;
-          display: block;
-          margin: 0 0 10px 0;
+          width: 100%;
         }
       }
     }
