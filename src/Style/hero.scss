@@ -37,6 +37,7 @@
     }
     .button-container {
       a {
+        text-decoration: none;
         width: 120px;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -55,7 +56,6 @@
     .hero-container-background {
       position: relative;
     }
-
     .card {
       width: 100%;
       display: flex;

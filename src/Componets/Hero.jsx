@@ -1,6 +1,12 @@
 import React from 'react';
 
-const Hero = ({ title, secondaryLinkText, primaryLinkText }) => {
+const Hero = ({
+  title,
+  secondaryLinkText,
+  secondaryLinkPath,
+  primaryLinkText,
+  primaryLinkPath,
+}) => {
   return (
     <>
       <div className="hero-container">
@@ -8,7 +14,7 @@ const Hero = ({ title, secondaryLinkText, primaryLinkText }) => {
           <div className="img-container">
             <img
               src="https://www.vinted.lt/assets/seller-promotion/other/banner_tablets_up-afe3d19776592a72f165c1bb93fd02c5528250a8c670ecc1656654323f9d4856.jpg"
-              alt=""
+              alt="background img"
             />
           </div>
         </div>
@@ -16,8 +22,26 @@ const Hero = ({ title, secondaryLinkText, primaryLinkText }) => {
           <h1 className="card-title">{title}</h1>
 
           <div className="button-container">
-            <a className="but but-primary">{primaryLinkText}</a>
-            <a className="but but-noBorder">{secondaryLinkText}</a>
+            {primaryLinkText ? (
+              <a
+                className="but but-primary"
+                href={primaryLinkPath ? primaryLinkPath : '#'}
+              >
+                {primaryLinkText}
+              </a>
+            ) : (
+              <></>
+            )}
+            {primaryLinkText ? (
+              <a
+                className="but but-noBorder"
+                href={secondaryLinkPath ? secondaryLinkPath : '#'}
+              >
+                {secondaryLinkText}
+              </a>
+            ) : (
+              <></>
+            )}
           </div>
         </div>
       </div>
