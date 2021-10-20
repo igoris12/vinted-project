@@ -1,24 +1,26 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 
-//   const getProductsIds = (link) => {
-//     return new Promise((resolve, reject) => {
-//       fetch(link).then((response) => resolve(response.json()));
-//     });
-//   };
 const NewOffers = ({ headerText }) => {
-  const [productsIds, setProductsIds] = useState([]);
-
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
+    let productData = [];
     fetch('https://in3.dev/vinted/api/news/')
       .then((response) => response.json())
-      .then((data) => setProductsIds(data));
-  }, []);
+      .then((idArray) => {
+        idArray.forEach((ids) => {
+          fetch(`https://in3.dev/vinted/api/products/${ids.id}`)
+            .then((response) => response.json())
+            .then((data) => {
+              productData.push(data);
+            });
+        });
 
-  console.log(productsIds);
-  // console.log(products, 2);
+        setProducts(productData);
+      });
+  }, []);
+  console.log(products);
 
   return (
     <>
