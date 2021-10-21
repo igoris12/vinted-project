@@ -3,10 +3,9 @@ import { useState, useEffect } from 'react';
 import ProductCard from './ProductCard';
 
 const NewOffers = ({ headerText }) => {
-  const [ids, setIds] = useState([]);
+  const [productsIds, setIds] = useState([]);
 
   useEffect(() => {
-    let productData = [];
     fetch('https://in3.dev/vinted/api/news/')
       .then((response) => response.json())
       .then((data) => {
@@ -20,7 +19,7 @@ const NewOffers = ({ headerText }) => {
         <div>
           <h3>{headerText}</h3>
         </div>
-        {ids.map((id) => (
+        {productsIds.map((id) => (
           <i>{<ProductCard productId={id.id} />}</i>
         ))}
       </div>
