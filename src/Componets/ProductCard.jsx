@@ -11,12 +11,32 @@ const ProductCard = ({ productId }) => {
         setProduct(data);
       });
   }, []);
-
+  console.log(product);
   return (
     <>
-      <div className={'ProductCard-container'}>
-        <p>CONTENT</p>
-      </div>
+      {product ? (
+        <div className={'ProductCard-container'}>
+          <div>
+            <i>ICON</i>
+            <p>name</p>
+          </div>
+          <div>
+            <img src={'4'} alt="Product Image" />
+          </div>
+          <div>
+            <b>
+              <p>{product.price + ' €'} </p>
+            </b>
+            <p>Size</p>
+            <p>color</p>
+            <div>
+              <i>icon</i>likes
+            </div>
+          </div>
+        </div>
+      ) : (
+        <></>
+      )}
     </>
   );
 };
