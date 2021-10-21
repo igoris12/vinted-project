@@ -1,26 +1,18 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
+import ProductCard from './ProductCard';
 
 const NewOffers = ({ headerText }) => {
-  const [products, setProducts] = useState([]);
+  const [ids, setIds] = useState([]);
 
   useEffect(() => {
     let productData = [];
     fetch('https://in3.dev/vinted/api/news/')
       .then((response) => response.json())
-      .then((idArray) => {
-        idArray.forEach((ids) => {
-          fetch(`https://in3.dev/vinted/api/products/${ids.id}`)
-            .then((response) => response.json())
-            .then((data) => {
-              productData.push(data);
-            });
-        });
-
-        setProducts(productData);
+      .then((data) => {
+        setIds(data);
       });
   }, []);
-  console.log(products);
 
   return (
     <>
@@ -28,7 +20,9 @@ const NewOffers = ({ headerText }) => {
         <div>
           <h3>{headerText}</h3>
         </div>
-        <div>Content</div>
+        {ids.map((id) => (
+          <i>{<ProductCard productId={id.id} />}</i>
+        ))}
       </div>
     </>
   );
