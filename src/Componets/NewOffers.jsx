@@ -19,9 +19,11 @@ const NewOffers = ({ headerText }) => {
         <div>
           <h3>{headerText}</h3>
         </div>
-        {productsIds.map((id) => (
-          <i>{<ProductCard productId={id.id} />}</i>
-        ))}
+        <ul>
+          {productsIds.map((id) => (
+            <li>{<ProductCard productId={id.id} />}</li>
+          ))}
+        </ul>
       </div>
     </>
   );
