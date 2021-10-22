@@ -19,7 +19,8 @@ const NewOffers = ({ headerText }) => {
         <div>
           <h3>{headerText}</h3>
         </div>
-        <ul>
+
+        <ul className="productsCard-container">
           {productsIds.map((id) => (
             <li>{<ProductCard productId={id.id} />}</li>
           ))}
