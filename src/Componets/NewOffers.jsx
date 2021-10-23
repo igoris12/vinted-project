@@ -16,7 +16,7 @@ const NewOffers = ({ headerText }) => {
   return (
     <>
       <div className="NewOffer-container">
-        <div>
+        <div className="offer-title-container">
           <h3>{headerText}</h3>
         </div>
 
