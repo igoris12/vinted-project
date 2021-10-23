@@ -24,7 +24,7 @@ const ProductCard = ({ productId }) => {
           <i>ICON</i>
           <p>name</p>
         </div>
-        <div>
+        <div className="main-img-container">
           <img src={main_img} alt="Product Image" />
         </div>
         <div>
