@@ -16,13 +16,15 @@ const NewOffers = ({ headerText }) => {
   return (
     <>
       <div className="NewOffer-container">
-        <div>
+        <div className="offer-title-container">
           <h3>{headerText}</h3>
         </div>
 
         <ul className="productsCard-container">
           {productsIds.map((id) => (
-            <li>{<ProductCard productId={id.id} />}</li>
+            <li className="productsCard">
+              {<ProductCard productId={id.id} />}
+            </li>
           ))}
         </ul>
       </div>
