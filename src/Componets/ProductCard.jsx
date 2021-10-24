@@ -1,4 +1,3 @@
-import { faRandom } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
 import { useState, useEffect } from 'react';
 
@@ -6,23 +5,36 @@ const ProductCard = ({ productId }) => {
   const [product, setProduct] = useState({});
   const [main_img, setMain_img] = useState('#');
   const [sizes, setSizes] = useState([]);
+  const [user, setUser] = useState([]);
 
   useEffect(() => {
     fetch(`https://in3.dev/vinted/api/products/${productId}`)
       .then((response) => response.json())
       .then((data) => {
-        setProduct(data);
-        setMain_img(data.img[data.main_img]);
-        setSizes(data.size);
+        return new Promise((resolve, reject) => {
+          setProduct(data);
+          setMain_img(data.img[data.main_img]);
+          setSizes(data.size);
+          resolve(data);
+        });
+      })
+      .then((data) => {
+        fetch(`https://in3.dev/vinted/api/users/${data.user}`)
+          .then((userData) => userData.json())
+          .then((userData) => setUser(userData));
       });
   }, []);
-
+  console.log(user);
   return (
     <>
       <div className={'ProductCard-container'}>
         <div>
-          <i>ICON</i>
-          <p>name</p>
+          <div className="userInfo">
+            <div className="userAvatar">
+              <img src={user.avatar} alt="User avatar" />
+            </div>
+            <p className="userName">{user.name}</p>
+          </div>
         </div>
         <div className="main-img-container">
           <img src={main_img} alt="Product Image" />
