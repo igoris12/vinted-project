@@ -29,7 +29,7 @@ const ProductCard = ({ productId }) => {
     <>
       <div className={'ProductCard-container'}>
         <div>
-          <div>
+          <div className="userInfo">
             <div className="userAvatar">
               <img src={user.avatar} alt="User avatar" />
             </div>
