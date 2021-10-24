@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/vinted-project/static/css/main.41706388.chunk.css",
+    "main.css": "/vinted-project/static/css/main.e507938c.chunk.css",
     "main.js": "/vinted-project/static/js/main.6642050f.chunk.js",
     "main.js.map": "/vinted-project/static/js/main.6642050f.chunk.js.map",
     "runtime-main.js": "/vinted-project/static/js/runtime-main.a5d602a9.js",
@@ -8,14 +8,14 @@
     "static/js/2.6be52575.chunk.js": "/vinted-project/static/js/2.6be52575.chunk.js",
     "static/js/2.6be52575.chunk.js.map": "/vinted-project/static/js/2.6be52575.chunk.js.map",
     "index.html": "/vinted-project/index.html",
-    "static/css/main.41706388.chunk.css.map": "/vinted-project/static/css/main.41706388.chunk.css.map",
+    "static/css/main.e507938c.chunk.css.map": "/vinted-project/static/css/main.e507938c.chunk.css.map",
     "static/js/2.6be52575.chunk.js.LICENSE.txt": "/vinted-project/static/js/2.6be52575.chunk.js.LICENSE.txt",
     "static/media/logo.74b6d4f1.png": "/vinted-project/static/media/logo.74b6d4f1.png"
   },
   "entrypoints": [
     "static/js/runtime-main.a5d602a9.js",
     "static/js/2.6be52575.chunk.js",
-    "static/css/main.41706388.chunk.css",
+    "static/css/main.e507938c.chunk.css",
     "static/js/main.6642050f.chunk.js"
   ]
 }
