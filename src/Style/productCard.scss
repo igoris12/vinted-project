@@ -44,3 +44,41 @@
     }
   }
 }
+
+@media screen and (max-width: 940px) {
+  .ProductCard-container {
+    .main-img-container {
+      height: 500px;
+      img {
+        height: 500px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 710px) {
+  .ProductCard-container {
+    .main-img-container {
+      height: 500px;
+      img {
+        height: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .ProductCard-container {
+    .main-img-container {
+      height: 300px;
+    }
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .ProductCard-container {
+    .main-img-container {
+      height: 150px;
+    }
+  }
+}
