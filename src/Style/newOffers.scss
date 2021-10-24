@@ -21,3 +21,27 @@
     }
   }
 }
+
+@media screen and (max-width: 1015px) {
+  .NewOffer-container {
+    .productsCard-container {
+      grid-template-columns: auto auto auto auto;
+    }
+  }
+}
+
+@media screen and (max-width: 940px) {
+  .NewOffer-container {
+    .productsCard-container {
+      grid-template-columns: auto auto auto;
+    }
+  }
+}
+
+@media screen and (max-width: 710px) {
+  .NewOffer-container {
+    .productsCard-container {
+      grid-template-columns: auto auto;
+    }
+  }
+}
