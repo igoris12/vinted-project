@@ -25,7 +25,7 @@ const ProductCard = ({ productId }) => {
           .then((userData) => setUser(userData));
       });
   }, []);
-  console.log(user.avatar);
+
   return (
     <>
       <div className={'ProductCard-container'}>
