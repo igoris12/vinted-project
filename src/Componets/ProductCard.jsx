@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
+import defaultImg from '../img/noAvatar.png';
 
 const ProductCard = ({ productId }) => {
   const [product, setProduct] = useState({});
@@ -24,14 +25,17 @@ const ProductCard = ({ productId }) => {
           .then((userData) => setUser(userData));
       });
   }, []);
-  console.log(user);
+  console.log(user.avatar);
   return (
     <>
       <div className={'ProductCard-container'}>
         <div>
           <div className="userInfo">
             <div className="userAvatar">
-              <img src={user.avatar} alt="User avatar" />
+              <img
+                src={user.avatar ? user.avatar : defaultImg}
+                alt="User avatar"
+              />
             </div>
             <p className="userName">{user.name}</p>
           </div>
