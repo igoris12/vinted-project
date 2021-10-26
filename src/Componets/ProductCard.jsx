@@ -27,6 +27,15 @@ const ProductCard = ({ productId }) => {
       .catch((e) => console.log(e));
   }, []);
 
+  // useEffect(() => {
+  //   const productsIdsCopy = JSON.parse(localStorage.getItem('productsIds'));
+  //   if (null == productsIdsCopy) {
+
+  //     return;
+  //   }
+  //   // setIds(productsIdsCopy);
+  // }, []);
+
   return (
     <>
       <div className={'ProductCard-container'}>

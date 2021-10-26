@@ -5,15 +5,47 @@ import getId from '../Shared/Id';
 
 const NewOffers = ({ headerText }) => {
   const [productsIds, setIds] = useState([]);
+  const [products, setProducts] = useState([]);
+
+  // useEffect(() => {
+  //   fetch('https://in3.dev/vinted/api/news/')
+  //     .then((response) => response.json())
+  //     .then((data) => {
+  //       setIds(data);
+  //       console.log(data);
+  //     })
+  //     .catch((e) => console.log(e));
+  // }, []);
 
   useEffect(() => {
-    fetch('https://in3.dev/vinted/api/news/')
-      .then((response) => response.json())
-      .then((data) => {
-        setIds(data);
-      })
-      .catch((e) => console.log(e));
+    const productsIdsCopy = JSON.parse(localStorage.getItem('productsIds'));
+    if (null == productsIdsCopy) {
+      // fetch('https://in3.dev/vinted/api/news/')
+      //   .then((response) => response.json())
+      //   .then((data) => {
+      //     setIds(data);
+      //     localStorage.setItem('productsIds', JSON.stringify(data));
+      //   })
+      //   .catch((e) => console.log(e));
+      getData();
+      return;
+    }
+    setIds(productsIdsCopy);
   }, []);
+
+  const getData = async () => {
+    const data = await fetch('https://in3.dev/vinted/api/news/');
+    const ids = await data.json();
+    setIds(ids);
+    localStorage.setItem('productsIds', JSON.stringify(ids));
+    for (let i = 0; i < ids.length; i++) {
+      let product = await fetch(
+        `https://in3.dev/vinted/api/products/${ids[i].id}`
+      );
+      // setProducts();
+      // console.log(product);
+    }
+  };
 
   return (
     <>
