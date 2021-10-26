@@ -23,8 +23,8 @@ const NewOffers = ({ headerText }) => {
 
         <ul className="productsCard-container">
           {productsIds.map((id) => (
-            <li className="productsCard">
-              {<ProductCard productId={id.id} key={getId()} />}
+            <li key={getId()} className="productsCard">
+              {<ProductCard productId={id.id} />}
             </li>
           ))}
         </ul>
