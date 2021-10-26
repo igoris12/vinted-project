@@ -23,7 +23,8 @@ const ProductCard = ({ productId }) => {
         fetch(`https://in3.dev/vinted/api/users/${data.user}`)
           .then((userData) => userData.json())
           .then((userData) => setUser(userData));
-      });
+      })
+      .catch((e) => console.log(e));
   }, []);
 
   return (

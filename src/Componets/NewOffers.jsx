@@ -11,7 +11,8 @@ const NewOffers = ({ headerText }) => {
       .then((response) => response.json())
       .then((data) => {
         setIds(data);
-      });
+      })
+      .catch((e) => console.log(e));
   }, []);
 
   return (
