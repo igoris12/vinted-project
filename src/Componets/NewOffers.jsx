@@ -20,13 +20,6 @@ const NewOffers = ({ headerText }) => {
   useEffect(() => {
     const productsIdsCopy = JSON.parse(localStorage.getItem('productsIds'));
     if (null == productsIdsCopy) {
-      // fetch('https://in3.dev/vinted/api/news/')
-      //   .then((response) => response.json())
-      //   .then((data) => {
-      //     setIds(data);
-      //     localStorage.setItem('productsIds', JSON.stringify(data));
-      //   })
-      //   .catch((e) => console.log(e));
       getData();
       return;
     }
