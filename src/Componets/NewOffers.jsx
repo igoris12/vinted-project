@@ -7,23 +7,15 @@ const NewOffers = ({ headerText }) => {
   const [productsIds, setIds] = useState([]);
   const [products, setProducts] = useState([]);
 
-  // useEffect(() => {
-  //   fetch('https://in3.dev/vinted/api/news/')
-  //     .then((response) => response.json())
-  //     .then((data) => {
-  //       setIds(data);
-  //       console.log(data);
-  //     })
-  //     .catch((e) => console.log(e));
-  // }, []);
-
   useEffect(() => {
     const productsIdsCopy = JSON.parse(localStorage.getItem('productsIds'));
+
     if (null == productsIdsCopy) {
       getData();
       return;
     }
     setIds(productsIdsCopy);
+    // setProducts(productsCopy);
   }, []);
 
   const getData = async () => {
@@ -31,13 +23,18 @@ const NewOffers = ({ headerText }) => {
     const ids = await data.json();
     setIds(ids);
     localStorage.setItem('productsIds', JSON.stringify(ids));
-    for (let i = 0; i < ids.length; i++) {
-      let product = await fetch(
-        `https://in3.dev/vinted/api/products/${ids[i].id}`
-      );
-      // setProducts();
-      // console.log(product);
-    }
+
+    // let productsCopy = [];
+    // for (let i = 0; i < ids.length; i++) {
+    //   let productCall = await fetch(
+    //     `https://in3.dev/vinted/api/products/${ids[i].id}`
+    //   );
+    //   const product = await productCall.json();
+    //   productsCopy.push(product);
+    // }
+    // setProducts(productsCopy);
+    // localStorage.setItem('products', JSON.stringify(productsCopy));
+    // console.log('end');
   };
 
   return (

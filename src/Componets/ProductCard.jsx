@@ -16,9 +16,20 @@ const ProductCard = ({ productId }) => {
           setProduct(data);
           setMain_img(data.img[data.main_img]);
           setSizes(data.size);
+          const productsData = JSON.parse(localStorage.getItem('products'));
+
+          let productsCopy = [];
+          if (productsData) {
+            productsCopy = [...productsData, data];
+          } else {
+            productsCopy = [data];
+          }
+
+          localStorage.setItem('products', JSON.stringify(productsCopy));
           resolve(data);
         });
       })
+
       .then((data) => {
         fetch(`https://in3.dev/vinted/api/users/${data.user}`)
           .then((userData) => userData.json())
