@@ -5,17 +5,15 @@ import getId from '../Shared/Id';
 
 const NewOffers = ({ headerText }) => {
   const [productsIds, setIds] = useState([]);
-  const [products, setProducts] = useState([]);
 
   useEffect(() => {
     const productsIdsCopy = JSON.parse(localStorage.getItem('productsIds'));
 
     if (null == productsIdsCopy) {
       getData();
-      return;
+    } else {
+      setIds(productsIdsCopy);
     }
-    setIds(productsIdsCopy);
-    // setProducts(productsCopy);
   }, []);
 
   const getData = async () => {
@@ -23,18 +21,6 @@ const NewOffers = ({ headerText }) => {
     const ids = await data.json();
     setIds(ids);
     localStorage.setItem('productsIds', JSON.stringify(ids));
-
-    // let productsCopy = [];
-    // for (let i = 0; i < ids.length; i++) {
-    //   let productCall = await fetch(
-    //     `https://in3.dev/vinted/api/products/${ids[i].id}`
-    //   );
-    //   const product = await productCall.json();
-    //   productsCopy.push(product);
-    // }
-    // setProducts(productsCopy);
-    // localStorage.setItem('products', JSON.stringify(productsCopy));
-    // console.log('end');
   };
 
   return (
