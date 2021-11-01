@@ -9,23 +9,54 @@ const ProductCard = ({ productId }) => {
   const [user, setUser] = useState([]);
 
   useEffect(() => {
-    fetch(`https://in3.dev/vinted/api/products/${productId}`)
-      .then((response) => response.json())
-      .then((data) => {
-        return new Promise((resolve, reject) => {
-          setProduct(data);
-          setMain_img(data.img[data.main_img]);
-          setSizes(data.size);
-          resolve(data);
-        });
-      })
-      .then((data) => {
-        fetch(`https://in3.dev/vinted/api/users/${data.user}`)
-          .then((userData) => userData.json())
-          .then((userData) => setUser(userData));
+    const productsData = JSON.parse(localStorage.getItem('products'));
+    if (productsData == null) {
+      getProductInfo();
+    } else {
+      productsData.forEach((productCopy) => {
+        if (productCopy.id == productId) {
+          setProduct(productCopy);
+          setMain_img(productCopy.img[productCopy.main_img]);
+          setSizes(productCopy.size);
+          getUser(productCopy.user);
+        }
       });
+    }
   }, []);
-  console.log(user.avatar);
+
+  const getProductInfo = async () => {
+    try {
+      let data = await fetch(
+        `https://in3.dev/vinted/api/products/${productId}`
+      );
+      const productInfo = await data.json();
+      const productsData = JSON.parse(localStorage.getItem('products'));
+      let productsCopy = [];
+      if (productsData) {
+        productsCopy = [...productsData, productInfo];
+      } else {
+        productsCopy = [productInfo];
+      }
+      setProduct(productInfo);
+      setMain_img(productInfo.img[productInfo.main_img]);
+      setSizes(productInfo.size);
+      localStorage.setItem('products', JSON.stringify(productsCopy));
+      getUser(productInfo.user);
+    } catch (e) {
+      console.error('Sorry you are not lucky today.');
+    }
+  };
+
+  const getUser = async (id) => {
+    try {
+      const data = await fetch(`https://in3.dev/vinted/api/users/${id}`);
+      const user = await data.json();
+      setUser(user);
+    } catch (e) {
+      console.error('Sorry you are not lucky today.');
+    }
+  };
+
   return (
     <>
       <div className={'ProductCard-container'}>

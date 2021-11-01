@@ -1,17 +1,27 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import ProductCard from './ProductCard';
+import getId from '../Shared/Id';
 
 const NewOffers = ({ headerText }) => {
   const [productsIds, setIds] = useState([]);
 
   useEffect(() => {
-    fetch('https://in3.dev/vinted/api/news/')
-      .then((response) => response.json())
-      .then((data) => {
-        setIds(data);
-      });
+    const productsIdsCopy = JSON.parse(localStorage.getItem('productsIds'));
+
+    if (null == productsIdsCopy) {
+      getData();
+    } else {
+      setIds(productsIdsCopy);
+    }
   }, []);
+
+  const getData = async () => {
+    const data = await fetch('https://in3.dev/vinted/api/news/');
+    const ids = await data.json();
+    setIds(ids);
+    localStorage.setItem('productsIds', JSON.stringify(ids));
+  };
 
   return (
     <>
@@ -22,7 +32,7 @@ const NewOffers = ({ headerText }) => {
 
         <ul className="productsCard-container">
           {productsIds.map((id) => (
-            <li className="productsCard">
+            <li key={getId()} className="productsCard">
               {<ProductCard productId={id.id} />}
             </li>
           ))}
