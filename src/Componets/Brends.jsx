@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import BrandItem from './BrandItem';
 
 const Brends = () => {
   const [brands, setBrands] = useState([]);
@@ -11,6 +12,7 @@ const Brends = () => {
       setBrands(brandsCopy);
     }
   }, []);
+
   const getBrands = async () => {
     try {
       const data = await fetch('https://in3.dev/vinted/api/brands/all');
@@ -22,8 +24,17 @@ const Brends = () => {
     }
   };
 
-  console.log(brands);
-  return <>Content</>;
+  return (
+    <>
+      <ul className="brands-container">
+        {brands.map((brand) => (
+          <li key={brand.id}>
+            <BrandItem content={brand} />
+          </li>
+        ))}
+      </ul>
+    </>
+  );
 };
 
 export default Brends;
