@@ -26,13 +26,16 @@ const Brends = () => {
 
   return (
     <>
-      <ul className="brands-container">
-        {brands.map((brand) => (
-          <li key={brand.id}>
-            <BrandItem content={brand} />
-          </li>
-        ))}
-      </ul>
+      <div className="brands-container">
+        <h1 className="title">Prekių ženklai</h1>
+        <ul>
+          {brands.map((brand) => (
+            <li key={brand.id}>
+              <BrandItem content={brand} />
+            </li>
+          ))}
+        </ul>
+      </div>
     </>
   );
 };
