@@ -3,10 +3,11 @@ import Brends from './Brends';
 import Header from './Header';
 import Hero from './Hero';
 import NewOffers from './NewOffers';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
 const App = () => {
   return (
-    <div>
+    <Router>
       <Header />
       <Hero
         title={'Atėjo metas atlaisvinti vietos spintoje?'}
@@ -15,7 +16,7 @@ const App = () => {
       />
       <Brends />
       <NewOffers headerText={'Naujienų srautas'} />
-    </div>
+    </Router>
   );
 };
 
