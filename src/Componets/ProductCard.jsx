@@ -59,7 +59,7 @@ const ProductCard = ({ productId }) => {
   };
 
   return (
-    <Link to={'/product ' + productId}>
+    <Link to={'/product ' + productId} className="productLink">
       <div className={'ProductCard-container'}>
         <div>
           <div className="userInfo">
