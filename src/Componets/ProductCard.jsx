@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import defaultImg from '../img/noAvatar.png';
+import { Link } from 'react-router-dom';
 
 const ProductCard = ({ productId }) => {
   const [product, setProduct] = useState({});
@@ -58,7 +59,7 @@ const ProductCard = ({ productId }) => {
   };
 
   return (
-    <>
+    <Link to={'/product ' + productId}>
       <div className={'ProductCard-container'}>
         <div>
           <div className="userInfo">
@@ -99,7 +100,7 @@ const ProductCard = ({ productId }) => {
           </p>
         </div>
       </div>
-    </>
+    </Link>
   );
 };
 
