@@ -12,7 +12,7 @@ const App = () => {
       <Header />
       <Routes>
         <Route
-          path="/"
+          path="/vinted-project"
           element={[
             <Hero
               title={'Atėjo metas atlaisvinti vietos spintoje?'}
