@@ -1,0 +1,30 @@
+.product {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  background-color: rgb(245, 246, 247);
+  .product-container {
+    //   background-color: rgb(245, 246, 247);
+    background-color: yellow;
+    display: flex;
+    width: calc(100% - 30px);
+    height: 100vh;
+    justify-content: center;
+    gap: 20px;
+
+    .product-gallery {
+      background-color: red;
+      margin-top: 30px;
+      display: grid;
+      width: 70%;
+    }
+    .product-info {
+      background-color: blue;
+      margin-top: 30px;
+      display: flex;
+      width: 30%;
+      background-color: white;
+      border-radius: 5px;
+    }
+  }
+}
