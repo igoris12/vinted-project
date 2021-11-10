@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import SelectedProductContent from './SelectedProductContent';
 const SelectedProducts = () => {
   let { id } = useParams();
   const [product, setProduct] = useState([]);
@@ -28,7 +29,11 @@ const SelectedProducts = () => {
     }
   };
 
-  return <>test {id}</>;
+  return (
+    <>
+      <SelectedProductContent user={user} product={product} />
+    </>
+  );
 };
 
 export default SelectedProducts;

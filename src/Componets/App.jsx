@@ -3,7 +3,7 @@ import Brends from './Brends';
 import Header from './Header';
 import Hero from './Hero';
 import NewOffers from './NewOffers';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import SelectedProducts from './SelectedProducts';
 
 const App = () => {
