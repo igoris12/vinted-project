@@ -5,6 +5,7 @@ const SelectedProducts = () => {
   let { id } = useParams();
   const [product, setProduct] = useState([]);
   const [user, setUser] = useState([]);
+  const [brand, setBrand] = useState([]);
 
   useEffect(() => {
     getProductInfo();
@@ -16,12 +17,13 @@ const SelectedProducts = () => {
       if (product.id == id) {
         setProduct(product);
         getUser(product.user);
+        getProductBrand(product.brand);
       }
     });
   };
-  const getUser = async (id) => {
+  const getUser = async (userId) => {
     try {
-      const data = await fetch(`https://in3.dev/vinted/api/users/${id}`);
+      const data = await fetch(`https://in3.dev/vinted/api/users/${userId}`);
       const user = await data.json();
       setUser(user);
     } catch (e) {
@@ -29,9 +31,18 @@ const SelectedProducts = () => {
     }
   };
 
+  const getProductBrand = (brandId) => {
+    const brandData = JSON.parse(localStorage.getItem('brands'));
+    brandData.forEach((brand) => {
+      if (brand.id == brandId) {
+        setBrand(brand);
+      }
+    });
+  };
+
   return (
     <>
-      <SelectedProductContent user={user} product={product} />
+      <SelectedProductContent user={user} product={product} brand={brand} />
     </>
   );
 };
