@@ -8,10 +8,23 @@ function SelectedProductContent({ user, product, brand }) {
         <div className="product-info">
           <span className="product-price">{product.price + ' €'}</span>
           <div className="brand">
-            <p>PREKĖS ŽENKLAS</p> <a href="#">{brand.title}</a>
+            <p className="title">PREKĖS ŽENKLAS</p>
+            <a className="value" href="#">
+              {brand.title}
+            </a>
           </div>
           <div className="size">
-            <p>DYDIS</p> <a href="#">{brand.title}</a>
+            <p className="title">DYDIS</p>
+            <p className="value">
+              {product.size &&
+                product.size.map((size, index) => {
+                  if (index < product.size.length - 1) {
+                    return size + ' / ';
+                  } else {
+                    return size;
+                  }
+                })}
+            </p>
           </div>
         </div>
       </div>
