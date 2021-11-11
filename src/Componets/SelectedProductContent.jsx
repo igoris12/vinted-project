@@ -6,14 +6,18 @@ function SelectedProductContent({ user, product, brand }) {
     <div className="product">
       <div className="product-container">
         <div className="product-gallery">Content</div>
+
         <div className="product-info">
           <div className="column-1">
-            <span className="product-price">{product.price + ' €'}</span>
+            <span className="product-price">
+              {Math.round(product.price) + ',00 €'}
+            </span>
             <div className="brand">
               <p className="title">PREKĖS ŽENKLAS</p>
               <a className="value" href="#">
                 {brand.title}
               </a>
+              <span className="icon">@</span>
             </div>
             <div className="size">
               <p className="title">DYDIS</p>
@@ -27,8 +31,9 @@ function SelectedProductContent({ user, product, brand }) {
                     }
                   })}
               </p>
+              <span className="icon">@</span>
             </div>
-            <div className="size">
+            <div className="login-time">
               <p className="title">ĮKELTA</p>
               <p className="value">
                 {'PRIEŠ ' + Math.round(Math.random() * 59) + ' MINUTES'}

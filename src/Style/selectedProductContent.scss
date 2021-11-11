@@ -4,20 +4,13 @@
   justify-content: center;
   background-color: rgb(245, 246, 247);
   .product-container {
-    //   background-color: rgb(245, 246, 247);
-    background-color: yellow;
+    background-color: rgb(245, 246, 247);
     display: flex;
     width: calc(100% - 30px);
     height: 100vh;
     justify-content: center;
     gap: 20px;
 
-    .product-gallery {
-      background-color: red;
-      margin-top: 30px;
-      display: grid;
-      width: 70%;
-    }
     .product-info {
       background-color: blue;
       margin-top: 30px;
@@ -26,6 +19,62 @@
       width: 30%;
       background-color: white;
       border-radius: 5px;
+
+      .title {
+        color: #999999;
+        width: 41%;
+        text-align: left;
+        font-size: 13px;
+      }
+
+      .value {
+        color: #666666;
+        width: 41%;
+        text-align: left;
+        font-size: 13px;
+      }
+
+      .icon {
+        width: 8%;
+        text-align: left;
+      }
+      .column-1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 15px;
+
+        .product-price {
+          width: 100%;
+          font-size: 24px;
+          border-bottom: 1px solid #999999;
+          padding-bottom: 9px;
+        }
+        .brand {
+          margin-top: 10px;
+          display: flex;
+          justify-content: space-between;
+          .value {
+            color: rgb(9, 177, 186);
+            text-decoration: none;
+            cursor: pointer;
+          }
+          .value:hover {
+            text-decoration: underline;
+          }
+        }
+        .size {
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+    }
+
+    .product-gallery {
+      background-color: red;
+      margin-top: 30px;
+      display: grid;
+      width: 70%;
     }
   }
 }
