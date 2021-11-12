@@ -1,0 +1,133 @@
+.product {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  background-color: rgb(245, 246, 247);
+  .product-container {
+    background-color: rgb(245, 246, 247);
+    display: flex;
+    width: calc(100% - 30px);
+    height: 100vh;
+    justify-content: center;
+    gap: 20px;
+
+    .product-info {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      width: 30%;
+      border-radius: 5px;
+
+      .title {
+        color: #999999;
+        width: 41%;
+        text-align: left;
+        font-size: 13px;
+      }
+
+      .value {
+        color: #666666;
+        width: 41%;
+        text-align: left;
+        font-size: 13px;
+      }
+
+      .icon {
+        width: 8%;
+        text-align: left;
+        color: #999999;
+        cursor: pointer;
+      }
+      .column-1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 15px;
+        gap: 2px;
+        background-color: white;
+
+        .product-price {
+          width: 100%;
+          font-size: 24px;
+          border-bottom: 1px solid #999999;
+          padding-bottom: 9px;
+        }
+        .brand {
+          margin-top: 10px;
+          display: flex;
+          justify-content: space-between;
+          .value {
+            color: rgb(9, 177, 186);
+            text-decoration: none;
+            cursor: pointer;
+          }
+          .value:hover {
+            text-decoration: underline;
+          }
+        }
+        .size {
+          display: flex;
+          justify-content: space-between;
+        }
+        .login-time {
+          display: flex;
+          justify-content: space-between;
+          .title {
+            width: 41%;
+          }
+          .value {
+            width: 55%;
+          }
+        }
+      }
+
+      .column-2 {
+        margin-top: 2px;
+        background-color: white;
+        .product-description {
+          display: flex;
+          flex-direction: column;
+          margin: 15px;
+          gap: 9px;
+          .title {
+            color: black;
+            font-size: 16px;
+            width: 100%;
+            word-break: break-word;
+          }
+          p {
+            color: #999999;
+            font-size: 16px;
+          }
+          .but-container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            .but {
+              margin: 0;
+              font-size: 14px;
+              padding: 9px;
+              svg {
+                width: 16px;
+                height: 16px;
+                margin-right: 5px;
+                fill: #999999;
+              }
+            }
+            .but-secondery {
+              color: #999999;
+            }
+          }
+        }
+      }
+    }
+
+    .product-gallery {
+      background-color: red;
+      margin-top: 30px;
+      display: grid;
+      width: 70%;
+    }
+  }
+}
