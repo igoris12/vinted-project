@@ -9,7 +9,7 @@ function SelectedProductContent({ user, product, brand }) {
       <div className="product-container">
         <div className="product-gallery">Content</div>
 
-        <div className="product-info">
+        <aside className="product-info">
           <div className="column-1">
             <span className="product-price">
               {Math.round(product.price) + ',00 €'}
@@ -68,7 +68,7 @@ function SelectedProductContent({ user, product, brand }) {
               </label>
             </div>
           </div>
-        </div>
+        </aside>
       </div>
     </div>
   );
