@@ -12,12 +12,10 @@
     gap: 20px;
 
     .product-info {
-      background-color: blue;
       margin-top: 30px;
       display: flex;
       flex-direction: column;
       width: 30%;
-      background-color: white;
       border-radius: 5px;
 
       .title {
@@ -46,6 +44,7 @@
         justify-content: center;
         padding: 15px;
         gap: 2px;
+        background-color: white;
 
         .product-price {
           width: 100%;
@@ -78,6 +77,47 @@
           }
           .value {
             width: 55%;
+          }
+        }
+      }
+
+      .column-2 {
+        margin-top: 2px;
+        background-color: white;
+        .product-description {
+          display: flex;
+          flex-direction: column;
+          margin: 15px;
+          gap: 9px;
+          .title {
+            color: black;
+            font-size: 16px;
+            width: 100%;
+            word-break: break-word;
+          }
+          p {
+            color: #999999;
+            font-size: 16px;
+          }
+          .but-container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            .but {
+              margin: 0;
+              font-size: 14px;
+              padding: 9px;
+              svg {
+                width: 16px;
+                height: 16px;
+                margin-right: 5px;
+                fill: #999999;
+              }
+            }
+            .but-secondery {
+              color: #999999;
+            }
           }
         }
       }
