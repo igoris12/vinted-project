@@ -1,4 +1,6 @@
 import React from 'react';
+import { BiDotsVerticalRounded } from 'react-icons/bi';
+import { IoIosInformationCircle } from 'react-icons/io';
 
 function SelectedProductContent({ user, product, brand }) {
   console.log(user);
@@ -17,7 +19,9 @@ function SelectedProductContent({ user, product, brand }) {
               <a className="value" href="#">
                 {brand.title}
               </a>
-              <span className="icon">@</span>
+              <span className="icon">
+                <BiDotsVerticalRounded />
+              </span>
             </div>
             <div className="size">
               <p className="title">DYDIS</p>
@@ -31,7 +35,9 @@ function SelectedProductContent({ user, product, brand }) {
                     }
                   })}
               </p>
-              <span className="icon">@</span>
+              <span className="icon">
+                <IoIosInformationCircle />
+              </span>
             </div>
             <div className="login-time">
               <p className="title">ĮKELTA</p>
