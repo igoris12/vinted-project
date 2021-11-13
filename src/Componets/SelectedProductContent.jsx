@@ -1,9 +1,21 @@
 import React from 'react';
 import { BiDotsVerticalRounded } from 'react-icons/bi';
 import { IoIosInformationCircle } from 'react-icons/io';
+import { FaStar } from 'react-icons/fa';
 
 function SelectedProductContent({ user, product, brand }) {
-  console.log(user);
+  const rating = () => {
+    let rating = Math.round(Math.random() * 5);
+    if (rating < 3) {
+      rating = 3;
+    }
+    const content = [];
+    for (let i = 0; i < rating; i++) {
+      content.push(<FaStar />);
+    }
+    return content;
+  };
+
   return (
     <div className="product">
       <div className="product-container">
@@ -65,16 +77,22 @@ function SelectedProductContent({ user, product, brand }) {
             </div>
           </div>
 
-          <div className="column-3">
+          <a className="column-3">
             <div className="user-info">
-              <label>
-                <div className="user-img">
-                  <img src={user.avatar} />
-                </div>
-                <p className="user-name">{user.name}</p>
-              </label>
+              <div className="user-img" id="avatar">
+                <img src={user.avatar} />
+              </div>
+              <lable for="avatar" className="user-name">
+                {user.name}
+                <ul className="rating">
+                  {rating(FaStar).map((icon) => {
+                    return icon;
+                  })}
+                  <p>{Math.round(Math.random() * 1000)}</p>
+                </ul>
+              </lable>
             </div>
-          </div>
+          </a>
         </aside>
       </div>
     </div>
