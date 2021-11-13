@@ -2,7 +2,6 @@ import React from 'react';
 import { BiDotsVerticalRounded } from 'react-icons/bi';
 import { IoIosInformationCircle } from 'react-icons/io';
 import { FaStar } from 'react-icons/fa';
-import { createElement } from 'react';
 
 function SelectedProductContent({ user, product, brand }) {
   const rating = () => {
