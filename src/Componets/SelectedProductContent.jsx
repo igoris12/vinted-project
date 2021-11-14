@@ -2,6 +2,7 @@ import React from 'react';
 import { BiDotsVerticalRounded } from 'react-icons/bi';
 import { IoIosInformationCircle } from 'react-icons/io';
 import { FaStar } from 'react-icons/fa';
+import defaultImg from '../img/noAvatar.png';
 
 function SelectedProductContent({ user, product, brand }) {
   const rating = () => {
@@ -19,7 +20,9 @@ function SelectedProductContent({ user, product, brand }) {
   return (
     <div className="product">
       <div className="product-container">
-        <div className="product-gallery">Content</div>
+        <div className="product-gallery">
+          {product.img && product.img.map((img) => <img src={img} alt="" />)}
+        </div>
 
         <aside className="product-info">
           <div className="column-1">
@@ -80,7 +83,7 @@ function SelectedProductContent({ user, product, brand }) {
           <a className="column-3">
             <div className="user-info">
               <div className="user-img" id="avatar">
-                <img src={user.avatar} />
+                <img src={user.avatar ? user.avatar : defaultImg} />
               </div>
               <lable for="avatar" className="user-name">
                 {user.name}
