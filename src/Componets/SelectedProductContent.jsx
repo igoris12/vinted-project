@@ -20,7 +20,9 @@ function SelectedProductContent({ user, product, brand }) {
   return (
     <div className="product">
       <div className="product-container">
-        <div className="product-gallery">Content</div>
+        <div className="product-gallery">
+          {product.img && product.img.map((img) => <img src={img} alt="" />)}
+        </div>
 
         <aside className="product-info">
           <div className="column-1">
