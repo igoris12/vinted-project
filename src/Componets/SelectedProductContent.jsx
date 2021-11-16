@@ -4,7 +4,7 @@ import { IoIosInformationCircle } from 'react-icons/io';
 import { FaStar } from 'react-icons/fa';
 import defaultImg from '../img/noAvatar.png';
 
-function SelectedProductContent({ user, product, brand }) {
+function SelectedProductContent({ user, product, brand, gallery }) {
   const rating = () => {
     let rating = Math.round(Math.random() * 5);
     if (rating < 3) {
@@ -16,12 +16,20 @@ function SelectedProductContent({ user, product, brand }) {
     }
     return content;
   };
+  console.log(gallery);
 
   return (
     <div className="product">
       <div className="product-container">
-        <div className="product-gallery">
-          {product.img && product.img.map((img) => <img src={img} alt="" />)}
+        <div className={'product-gallery ' + gallery}>
+          {product.img &&
+            product.img.map((img, index) => {
+              if (index <= 4) {
+                return (
+                  <img className={'img-' + (1 + index)} src={img} alt="" />
+                );
+              }
+            })}
         </div>
 
         <aside className="product-info">
