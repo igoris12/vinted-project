@@ -6,6 +6,7 @@ const SelectedProducts = () => {
   const [product, setProduct] = useState([]);
   const [user, setUser] = useState([]);
   const [brand, setBrand] = useState([]);
+  const [gallery, setGallery] = useState('');
 
   useEffect(() => {
     getProductInfo();
@@ -18,9 +19,19 @@ const SelectedProducts = () => {
         setProduct(product);
         getUser(product.user);
         getProductBrand(product.brand);
+        if (product.img.length == 3) {
+          setGallery('group-3');
+        } else if (product.img.length == 2) {
+          setGallery('group-2');
+        } else if (product.img.length == 1) {
+          setGallery('group-1');
+        } else {
+          setGallery('group-4');
+        }
       }
     });
   };
+
   const getUser = async (userId) => {
     try {
       const data = await fetch(`https://in3.dev/vinted/api/users/${userId}`);
@@ -42,7 +53,12 @@ const SelectedProducts = () => {
 
   return (
     <>
-      <SelectedProductContent user={user} product={product} brand={brand} />
+      <SelectedProductContent
+        user={user}
+        product={product}
+        brand={brand}
+        gallery={gallery}
+      />
     </>
   );
 };

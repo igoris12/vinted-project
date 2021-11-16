@@ -3,16 +3,8 @@ import { BiDotsVerticalRounded } from 'react-icons/bi';
 import { IoIosInformationCircle } from 'react-icons/io';
 import { FaStar } from 'react-icons/fa';
 import defaultImg from '../img/noAvatar.png';
-import { useState, useEffect } from 'react';
 
-function SelectedProductContent({ user, product, brand }) {
-  const [galleryGroup, setGalleryGroup] = useState('aaa');
-
-  useEffect(() => {
-    // product && getGalleryClass(product.img);
-    product && console.log(product.img);
-  }, []);
-
+function SelectedProductContent({ user, product, brand, gallery }) {
   const rating = () => {
     let rating = Math.round(Math.random() * 5);
     if (rating < 3) {
@@ -24,24 +16,15 @@ function SelectedProductContent({ user, product, brand }) {
     }
     return content;
   };
-
-  const getGalleryClass = (imageArray) => {
-    if (imageArray.length > 4) {
-      setGalleryGroup('group-4');
-    } else if (imageArray.length == 3) {
-      setGalleryGroup('group-3');
-    } else if (imageArray.length == 2) {
-      setGalleryGroup('group-2');
-    }
-  };
+  console.log(gallery);
 
   return (
     <div className="product">
       <div className="product-container">
-        <div className={'product-gallery ' + galleryGroup}>
+        <div className={'product-gallery ' + gallery}>
           {product.img &&
             product.img.map((img, index) => {
-              if (index <= 2) {
+              if (index <= 3) {
                 return (
                   <img className={'img-' + (1 + index)} src={img} alt="" />
                 );
