@@ -21,15 +21,17 @@ function SelectedProductContent({ user, product, brand, gallery }) {
   return (
     <div className="product">
       <div className="product-container">
-        <div className={'product-gallery ' + gallery}>
-          {product.img &&
-            product.img.map((img, index) => {
-              if (index <= 4) {
-                return (
-                  <img className={'img-' + (1 + index)} src={img} alt="" />
-                );
-              }
-            })}
+        <div className={'product-gallery'}>
+          <div className={gallery}>
+            {product.img &&
+              product.img.map((img, index) => {
+                if (index <= 4) {
+                  return (
+                    <img className={'img-' + (1 + index)} src={img} alt="" />
+                  );
+                }
+              })}
+          </div>
         </div>
 
         <aside className="product-info">
