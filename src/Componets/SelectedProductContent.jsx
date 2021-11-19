@@ -27,7 +27,9 @@ function SelectedProductContent({ user, product, brand, gallery }) {
               product.img.map((img, index) => {
                 if (index <= 4) {
                   return (
-                    <img className={'img-' + (1 + index)} src={img} alt="" />
+                    <a className={'img-' + (1 + index)} href={img}>
+                      <img src={img} alt="" />
+                    </a>
                   );
                 }
               })}
