@@ -28,9 +28,19 @@ function SelectedProductContent({ user, product, brand, gallery }) {
               product.img.map((img, index) => {
                 if (index <= 4) {
                   return (
-                    <a className={'img-' + (1 + index)} href={img}>
-                      <img src={img} alt="" />
-                    </a>
+                    //
+
+                    <Fancybox options={{ infinite: false }}>
+                      {
+                        <a
+                          className={'img-' + (1 + index)}
+                          data-fancybox="gallery"
+                          data-src={img}
+                        >
+                          <img src={img} alt="" />{' '}
+                        </a>
+                      }
+                    </Fancybox>
                   );
                 }
               })}
@@ -111,25 +121,6 @@ function SelectedProductContent({ user, product, brand, gallery }) {
           </a>
         </aside>
       </div>
-      <Fancybox options={{ infinite: false }}>
-        <p>
-          <button
-            data-fancybox="gallery"
-            data-src="https://lipsum.app/id/1/800x600"
-            className="button button--secondary"
-          >
-            Image #1
-          </button>
-
-          <button
-            data-fancybox="gallery"
-            data-src="https://lipsum.app/id/2/800x600"
-            className="button button--secondary"
-          >
-            Image #2
-          </button>
-        </p>
-      </Fancybox>
     </div>
   );
 }
