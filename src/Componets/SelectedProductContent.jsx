@@ -26,23 +26,21 @@ function SelectedProductContent({ user, product, brand, gallery }) {
           <div className={gallery}>
             {product.img &&
               product.img.map((img, index) => {
-                if (index <= 4) {
-                  return (
-                    //
-
-                    <Fancybox options={{ infinite: false }}>
-                      {
-                        <a
-                          className={'img-' + (1 + index)}
-                          data-fancybox="gallery"
-                          data-src={img}
-                        >
-                          <img src={img} alt="" />{' '}
-                        </a>
-                      }
-                    </Fancybox>
-                  );
-                }
+                // if (index <= 4) {
+                return (
+                  <Fancybox options={{ infinite: true }}>
+                    {
+                      <a
+                        className={'img img-' + (1 + index)}
+                        data-fancybox="gallery"
+                        data-src={img}
+                      >
+                        <img src={img} alt="" />{' '}
+                      </a>
+                    }
+                  </Fancybox>
+                );
+                // }
               })}
           </div>
         </div>

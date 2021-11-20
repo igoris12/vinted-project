@@ -21,21 +21,38 @@
           object-fit: cover;
           width: 100%;
           height: 100%;
+          display: none;
         }
         .img-1 {
           grid-area: img1;
+
+          img {
+            display: inline-block;
+          }
         }
         .img-2 {
           grid-area: img2;
+          img {
+            display: inline-block;
+          }
         }
         .img-3 {
           grid-area: img3;
+          img {
+            display: inline-block;
+          }
         }
         .img-4 {
           grid-area: img4;
+          img {
+            display: inline-block;
+          }
         }
         .img-5 {
           grid-area: img5;
+          img {
+            display: inline-block;
+          }
         }
       }
     }
