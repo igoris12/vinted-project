@@ -3,6 +3,7 @@ import { BiDotsVerticalRounded } from 'react-icons/bi';
 import { IoIosInformationCircle } from 'react-icons/io';
 import { FaStar } from 'react-icons/fa';
 import defaultImg from '../img/noAvatar.png';
+import Fancybox from './Fancybox';
 
 function SelectedProductContent({ user, product, brand, gallery }) {
   const rating = () => {
@@ -110,6 +111,25 @@ function SelectedProductContent({ user, product, brand, gallery }) {
           </a>
         </aside>
       </div>
+      <Fancybox options={{ infinite: false }}>
+        <p>
+          <button
+            data-fancybox="gallery"
+            data-src="https://lipsum.app/id/1/800x600"
+            className="button button--secondary"
+          >
+            Image #1
+          </button>
+
+          <button
+            data-fancybox="gallery"
+            data-src="https://lipsum.app/id/2/800x600"
+            className="button button--secondary"
+          >
+            Image #2
+          </button>
+        </p>
+      </Fancybox>
     </div>
   );
 }
