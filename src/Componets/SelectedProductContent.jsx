@@ -3,6 +3,7 @@ import { BiDotsVerticalRounded } from 'react-icons/bi';
 import { IoIosInformationCircle } from 'react-icons/io';
 import { FaStar } from 'react-icons/fa';
 import defaultImg from '../img/noAvatar.png';
+import Fancybox from './Fancybox';
 
 function SelectedProductContent({ user, product, brand, gallery }) {
   const rating = () => {
@@ -25,11 +26,21 @@ function SelectedProductContent({ user, product, brand, gallery }) {
           <div className={gallery}>
             {product.img &&
               product.img.map((img, index) => {
-                if (index <= 4) {
-                  return (
-                    <img className={'img-' + (1 + index)} src={img} alt="" />
-                  );
-                }
+                // if (index <= 4) {
+                return (
+                  <Fancybox options={{ infinite: true }}>
+                    {
+                      <a
+                        className={'img img-' + (1 + index)}
+                        data-fancybox="gallery"
+                        data-src={img}
+                      >
+                        <img src={img} alt="" />{' '}
+                      </a>
+                    }
+                  </Fancybox>
+                );
+                // }
               })}
           </div>
         </div>
