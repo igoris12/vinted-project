@@ -22,6 +22,7 @@
           width: 100%;
           height: 100%;
           display: none;
+          cursor: pointer;
         }
         .img-1 {
           grid-area: img1;
@@ -67,6 +68,7 @@
             align-items: center;
             justify-content: center;
             font-size: 30px;
+            cursor: pointer;
           }
         }
       }
