@@ -35,7 +35,9 @@ function SelectedProductContent({ user, product, brand, gallery }) {
                       >
                         <img src={img} alt="" />
                         {product.img.length > 5 && index == 4 && (
-                          <div className="cover">+1</div>
+                          <div className="cover">{`+${
+                            product.img.length - 5
+                          }`}</div>
                         )}
                       </a>
                     }
