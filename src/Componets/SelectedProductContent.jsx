@@ -17,7 +17,6 @@ function SelectedProductContent({ user, product, brand, gallery }) {
     }
     return content;
   };
-  console.log(gallery);
 
   return (
     <div className="product">
@@ -26,7 +25,6 @@ function SelectedProductContent({ user, product, brand, gallery }) {
           <div className={gallery}>
             {product.img &&
               product.img.map((img, index) => {
-                // if (index <= 4) {
                 return (
                   <Fancybox options={{ infinite: true }}>
                     {
@@ -35,12 +33,16 @@ function SelectedProductContent({ user, product, brand, gallery }) {
                         data-fancybox="gallery"
                         data-src={img}
                       >
-                        <img src={img} alt="" />{' '}
+                        <img src={img} alt="" />
+                        {product.img.length > 5 && index == 4 && (
+                          <div className="cover">{`+${
+                            product.img.length - 5
+                          }`}</div>
+                        )}
                       </a>
                     }
                   </Fancybox>
                 );
-                // }
               })}
           </div>
         </div>
