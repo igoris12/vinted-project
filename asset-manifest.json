@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/vinted-project/static/css/main.ba30bc72.chunk.css",
+    "main.css": "/vinted-project/static/css/main.d12c4715.chunk.css",
     "main.js": "/vinted-project/static/js/main.414114ec.chunk.js",
     "main.js.map": "/vinted-project/static/js/main.414114ec.chunk.js.map",
     "runtime-main.js": "/vinted-project/static/js/runtime-main.a5d602a9.js",
@@ -10,7 +10,7 @@
     "static/js/2.38c4df08.chunk.js.map": "/vinted-project/static/js/2.38c4df08.chunk.js.map",
     "index.html": "/vinted-project/index.html",
     "static/css/2.23c406ed.chunk.css.map": "/vinted-project/static/css/2.23c406ed.chunk.css.map",
-    "static/css/main.ba30bc72.chunk.css.map": "/vinted-project/static/css/main.ba30bc72.chunk.css.map",
+    "static/css/main.d12c4715.chunk.css.map": "/vinted-project/static/css/main.d12c4715.chunk.css.map",
     "static/js/2.38c4df08.chunk.js.LICENSE.txt": "/vinted-project/static/js/2.38c4df08.chunk.js.LICENSE.txt",
     "static/media/logo.74b6d4f1.png": "/vinted-project/static/media/logo.74b6d4f1.png",
     "static/media/noAvatar.12e634ac.png": "/vinted-project/static/media/noAvatar.12e634ac.png"
@@ -19,7 +19,7 @@
     "static/js/runtime-main.a5d602a9.js",
     "static/css/2.23c406ed.chunk.css",
     "static/js/2.38c4df08.chunk.js",
-    "static/css/main.ba30bc72.chunk.css",
+    "static/css/main.d12c4715.chunk.css",
     "static/js/main.414114ec.chunk.js"
   ]
 }
