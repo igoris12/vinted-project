@@ -3,6 +3,7 @@
   justify-content: center;
   padding: 5px;
   border-bottom: 1px solid rgb(225, 222, 222);
+  margin-bottom: 40px;
   .logo-container {
     margin: 10px 40px 0 20px;
     cursor: pointer;
@@ -13,7 +14,7 @@
     }
   }
 
-  .sornt-container {
+  .sort-container {
     display: flex;
     flex-direction: row;
     margin-top: 10px;
@@ -32,7 +33,6 @@
   }
   .search-container {
     width: 35%;
-
     margin-top: 10px;
     background-color: #f5f5f5;
     margin-right: 10%;
@@ -107,16 +107,41 @@
         color: rgb(153, 153, 153);
       }
     }
-    .sornt-container {
+    .sort-container {
       position: absolute;
       top: 40px;
       left: 25px;
+      width: 15%;
     }
     .search-container {
       position: absolute;
       top: 40px;
       left: 109px;
       width: 85%;
+      padding: 6px;
+      border-radius: 5px;
+    }
+
+    .search-sort-container {
+      left: 25px;
+      top: 85px;
+    }
+  }
+}
+
+@media screen and (max-width: 775px) {
+  .header-container {
+    .sort-container {
+      position: absolute;
+      top: 40px;
+      left: 25px;
+      width: 300px;
+    }
+    .search-container {
+      position: absolute;
+      top: 40px;
+      left: 109px;
+      width: 70vw;
       padding: 6px;
       border-radius: 5px;
     }

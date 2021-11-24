@@ -41,7 +41,7 @@ const Header = () => {
           <img src={logo} alt="logo" />
         </div>
 
-        <div className="sornt-container" onClick={sortDisplayHandler}>
+        <div className="sort-container" onClick={sortDisplayHandler}>
           <span>
             <p>Prekėa</p> <FontAwesomeIcon icon={faSortDown}></FontAwesomeIcon>
           </span>
