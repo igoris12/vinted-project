@@ -35,13 +35,16 @@ const Header = () => {
   };
 
   return (
-    <div className="header">
+    <div
+      className="header"
+      style={{ display: mobileHeader ? 'sticky' : 'block' }}
+    >
       <div className="header-container">
         <div className="logo-container">
           <img src={logo} alt="logo" />
         </div>
 
-        <div className="sornt-container" onClick={sortDisplayHandler}>
+        <div className="sort-container" onClick={sortDisplayHandler}>
           <span>
             <p>Prekėa</p> <FontAwesomeIcon icon={faSortDown}></FontAwesomeIcon>
           </span>
