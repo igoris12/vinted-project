@@ -35,7 +35,10 @@ const Header = () => {
   };
 
   return (
-    <div className="header">
+    <div
+      className="header"
+      style={{ display: mobileHeader ? 'sticky' : 'block' }}
+    >
       <div className="header-container">
         <div className="logo-container">
           <img src={logo} alt="logo" />
