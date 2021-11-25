@@ -37,7 +37,7 @@ const Header = () => {
   return (
     <div
       className="header"
-      style={{ position: !mobileHeader ? 'sticky' : 'relative' }}
+      style={{ position: toggle ? 'relative' : 'sticky' }}
     >
       <div className="header-container">
         <div className="logo-container">
