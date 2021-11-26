@@ -2,7 +2,7 @@
   .product {
     .product-container {
       flex-direction: column;
-      margin-top: 250px;
+      margin-top: 190px;
       gap: 0;
       .product-gallery {
         width: 100%;
@@ -42,7 +42,7 @@
   .product {
     .product-container {
       flex-direction: column;
-      margin-top: 260px;
+      margin-top: 220px;
       .product-gallery {
         width: 100%;
       }
@@ -72,7 +72,7 @@
 @media screen and (max-width: 500px) {
   .product {
     .product-container {
-      margin-top: 100px;
+      margin-top: 40px;
       .product-gallery {
         height: 50%;
         .group-4 {

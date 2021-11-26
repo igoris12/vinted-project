@@ -8,6 +8,7 @@ import {
   faSortDown,
   faQuestionCircle,
 } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [sort, setSort] = useState(false);
@@ -40,9 +41,9 @@ const Header = () => {
       style={{ position: toggle ? 'relative' : 'sticky' }}
     >
       <div className="header-container">
-        <div className="logo-container">
+        <Link to="/vinted-project" className="logo-container">
           <img src={logo} alt="logo" />
-        </div>
+        </Link>
 
         <div className="sort-container" onClick={sortDisplayHandler}>
           <span>
