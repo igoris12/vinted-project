@@ -13,10 +13,22 @@
       z-index: 0;
       width: 100%;
       height: 100%;
+      position: relative;
       img {
         object-fit: cover;
         width: 100%;
         height: 100%;
+      }
+      .img-effect {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 50%;
+        height: 20%;
+        background-position: left;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url('https://www.vinted.lt/assets/hero-block/tear-d431548c90905ad757632e4c3075d9473e38c7c6642721efeae9413afb9387a2.svg');
       }
     }
   }
