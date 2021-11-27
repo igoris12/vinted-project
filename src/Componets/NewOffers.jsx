@@ -2,7 +2,6 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import ProductCard from './ProductCard';
 import getId from '../Shared/Id';
-import { Switch } from 'react-router-dom';
 
 const NewOffers = ({ headerText }) => {
   const [productsIds, setIds] = useState([]);
