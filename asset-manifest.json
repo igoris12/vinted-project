@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/vinted-project/static/css/main.ffc7214c.chunk.css",
-    "main.js": "/vinted-project/static/js/main.1f2c4d04.chunk.js",
-    "main.js.map": "/vinted-project/static/js/main.1f2c4d04.chunk.js.map",
+    "main.js": "/vinted-project/static/js/main.b1cdd613.chunk.js",
+    "main.js.map": "/vinted-project/static/js/main.b1cdd613.chunk.js.map",
     "runtime-main.js": "/vinted-project/static/js/runtime-main.a5d602a9.js",
     "runtime-main.js.map": "/vinted-project/static/js/runtime-main.a5d602a9.js.map",
     "static/css/2.23c406ed.chunk.css": "/vinted-project/static/css/2.23c406ed.chunk.css",
@@ -12,6 +12,7 @@
     "static/css/2.23c406ed.chunk.css.map": "/vinted-project/static/css/2.23c406ed.chunk.css.map",
     "static/css/main.ffc7214c.chunk.css.map": "/vinted-project/static/css/main.ffc7214c.chunk.css.map",
     "static/js/2.38c4df08.chunk.js.LICENSE.txt": "/vinted-project/static/js/2.38c4df08.chunk.js.LICENSE.txt",
+    "static/media/hero-background.d78d36cf.png": "/vinted-project/static/media/hero-background.d78d36cf.png",
     "static/media/logo.74b6d4f1.png": "/vinted-project/static/media/logo.74b6d4f1.png",
     "static/media/noAvatar.12e634ac.png": "/vinted-project/static/media/noAvatar.12e634ac.png"
   },
@@ -20,6 +21,6 @@
     "static/css/2.23c406ed.chunk.css",
     "static/js/2.38c4df08.chunk.js",
     "static/css/main.ffc7214c.chunk.css",
-    "static/js/main.1f2c4d04.chunk.js"
+    "static/js/main.b1cdd613.chunk.js"
   ]
 }
