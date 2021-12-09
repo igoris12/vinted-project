@@ -3,22 +3,23 @@
 ![Gluten Status](https://img.shields.io/badge/Gluten-Free-green.svg)
 ![Eco Status](https://img.shields.io/badge/ECO-Friendly-green.svg)
 
-# Vinted.lt Copy
+### Vinted.lt Copy
 
-Vinted.lt Copy Project
+## About The Project
 
 This project is for educational porpuses only.
 In this project I try to make something similar to vinted.lt website using React.js
+
 Site published at https://igoris12.github.io/vinted-project/
+
 Design: [Vinted.lt](https://www.vinted.lt/)
 
-## Project features
+### Built With
 
-For this project was used React.js.
-Fake Api for users and product data.
-[Api](https://docs.google.com/document/d/1HibXhUNB93P6usjY40aZkLd9Ku3b8x7iNg99AdJqfgo/edit)
-[React Icons v4.3.1 ](https://react-icons.github.io/react-icons/).
-[React Router v6](https://reactrouter.com/).
+* [React.js](https://reactjs.org/)
+* [Fake Api](https://docs.google.com/document/d/1HibXhUNB93P6usjY40aZkLd9Ku3b8x7iNg99AdJqfgo/edit)
+* [React Icons v4.3.1 ](https://react-icons.github.io/react-icons/).
+* [React Router v6](https://reactrouter.com/).
 
 ## Authors
 
