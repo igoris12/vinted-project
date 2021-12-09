@@ -18,8 +18,8 @@ Design: [Vinted.lt](https://www.vinted.lt/)
 
 * [React.js](https://reactjs.org/)
 * [Fake Api](https://docs.google.com/document/d/1HibXhUNB93P6usjY40aZkLd9Ku3b8x7iNg99AdJqfgo/edit)
-* [React Icons v4.3.1 ](https://react-icons.github.io/react-icons/).
-* [React Router v6](https://reactrouter.com/).
+* [React Icons v4.3.1 ](https://react-icons.github.io/react-icons/)
+* [React Router v6](https://reactrouter.com/)
 
 ## Authors
 
