@@ -33,7 +33,7 @@ const MobileHeader = ({ toggleS, mobileHeaderS }) => {
           <Mobilelink
             text={'Vyrams'}
             img={
-              'https://images1.vinted.net/t/03_026db_eoet3G4ph7RCugDXjD19dxdD/48x48/1623310082.png?s=a500167bbf92fbaa6072056ab7c2a25eafd0fc01'
+              'https://images1.vinted.net/t/03_01622_tSe71pyhEWwo89RQfJ1QeBoA/48x48/1638191935.png?s=a63e68f729bb0c50a28caea7fe8b2160ca0640c2'
             }
           />
           <Mobilelink
